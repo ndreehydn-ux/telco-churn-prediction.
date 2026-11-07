@@ -15,7 +15,7 @@ Mempertahankan pelanggan jauh lebih murah dibanding mencari pelanggan baru. Tim 
 | Recall kelas churn (threshold 0,33) | **80,5%** |
 | Churner tertangkap dengan menghubungi top 20% risiko | **63,5%** (lift 3,2×) |
 
-![Confusion matrix, ROC, PR curve](images/confusion_roc_pr.png)
+![Confusion matrix, ROC, PR curve](Images/confusion_roc_pr.png)
 
 ## 🔍 Faktor Penyebab Churn (SHAP)
 - **Tenure rendah** (pelanggan baru) adalah faktor risiko terbesar.
@@ -23,7 +23,7 @@ Mempertahankan pelanggan jauh lebih murah dibanding mencari pelanggan baru. Tim 
 - Pembayaran via **electronic check**, **paperless billing**, dan **fiber optic** menaikkan risiko.
 - Pelanggan **tanpa Online Security / Tech Support** lebih mudah pergi.
 
-![SHAP importance](images/shap_importance.png)
+![SHAP importance](Images/shap_importance.png)
 
 ## 🧪 Metodologi
 1. **EDA**: 594.194 pelanggan, 19 fitur (16 kategorikal), 22,5% churn.
@@ -34,7 +34,7 @@ Mempertahankan pelanggan jauh lebih murah dibanding mencari pelanggan baru. Tim 
 6. **Threshold** dipilih dari prediksi out-of-fold data latih, tidak menyentuh data uji.
 7. **Interpretasi & bisnis**: SHAP, cumulative gains, dan simulasi profit program retensi.
 
-![Perbandingan model](images/model_comparison.png)
+![Perbandingan model](Images/model_comparison.png)
 
 ## 💡 Temuan Menarik
 - **Model boosting unggul**, tetapi CatBoost, LightGBM, dan XGBoost praktis setara (selisih < std antar fold). LightGBM ~55× lebih cepat dilatih.
@@ -45,8 +45,8 @@ Mempertahankan pelanggan jauh lebih murah dibanding mencari pelanggan baru. Tim 
 | File | Isi |
 |---|---|
 | `churn_prediction.ipynb` | Notebook lengkap: EDA → modeling → evaluasi → SHAP |
-| `reports/` | Laporan akhir (PDF) |
-| `images/` | Grafik hasil |
+| `Reports/` | Laporan akhir (PDF) |
+| `Images/` | Grafik hasil |
 
 ## ▶️ Cara Menjalankan
 1. Unduh `train.csv` dari [Kaggle Playground Series S6E3](https://www.kaggle.com/competitions/playground-series-s6e3) dan letakkan di folder project.
